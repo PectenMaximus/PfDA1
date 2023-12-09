@@ -3,7 +3,7 @@
 
 import numpy as np
 import random 
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 # Declare variables
 MoonPhase = ["Full", "Half", "Quarter"]            
@@ -12,6 +12,7 @@ SpatProduction = ["High", "Medium","Low"]
 # Generating Random Temperatures
 TempRange = np.random.default_rng(12345)
 Temp = TempRange.integers(low=7 , high=18, size=100)
+print (Temp)
 
 # Generating Random Salinities
 SalinityRange = np.random.default_rng(12345)
@@ -26,6 +27,8 @@ print (MPRange)
 SpatRange = np.random.choice(SpatProduction, size=100)
 print (SpatRange)
 
-
-
-   
+plt.bar(["Temperature","Salinity"],[Temp[0],Sal[0]])
+plt.title("SpatProduction")
+plt.xlabel("Events")
+plt.ylabel("TempValue")
+plt.show()
