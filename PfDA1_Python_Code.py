@@ -1,8 +1,6 @@
-# This code generates random variables for temperature (in degrees), salnity (in parts per million) and Moonphase.
-# Based on the variables the code determines an oyster sites probability of spawning new spat: High, Medium or Low.
-
+#Imports
 import numpy as np
-import random 
+import random as random
 import matplotlib.pyplot as plt
 
 # Declare variables
@@ -23,19 +21,15 @@ MPRange = np.random.choice(MoonPhase, size=100)
 # Generating Random SpatProduction
 SpatRange = np.random.choice(SpatProduction, size=100)
 
-#Print the Full Range for all results
-for iLoop in range (0, 99):
-    print(Temp[iLoop],Sal[iLoop],MPRange[iLoop],SpatRange[iLoop])
+# Print the Full Range for all results
+#for iLoop in range (0, 99):
+    #print(Temp[iLoop],Sal[iLoop],MPRange[iLoop],SpatRange[iLoop])
 
 # Temperature against Salinty for Full Moon - Spat Production High=Green, Medium=Orange, Low=red.
-MasterArray = np.array []
 for iLoop in range (0,99):
     if (MPRange[iLoop]=="Full"):
-        print(Temp[iLoop],Sal[iLoop],MPRange[iLoop],SpatRange[iLoop])
-        FullMoonTemp = (Temp[iLoop])
-        FullMoonSal = (Sal[iLoop])
-        MasterArray = [Temp[iLoop],Sal[iLoop]]
-
+        print(|Temp[iLoop]|,|Sal[iLoop]|,|MPRange[iLoop]|,|SpatRange[iLoop]|)
+            
 # Temperature against Salinty for Half Moon - Spat Production High=Green, Medium=Orange, Low=red.
 for iLoop in range (0,99):
     if (MPRange[iLoop]=="Half"):
@@ -45,18 +39,29 @@ for iLoop in range (0,99):
 for iLoop in range (0,99):
     if (MPRange[iLoop]=="Quarter"):
         print(Temp[iLoop],Sal[iLoop],MPRange[iLoop],SpatRange[iLoop])
-         
 
+         
 #plt.bar(["T1","S1"],[Temp[0],Sal[0]])
 #plt.title("SpatProduction")
 #plt.xlabel("Events")
 #plt.ylabel("TempValue")
 #plt.show()
 
-# Temperature against Salinity   
-plt.scatter([Temp],[Sal])  
-plt.axis((1,25,0,40))
-plt.xlabel("Temperature")
-plt.ylabel("Salinity")
-plt.xscale("linear")
-plt.show()
+# Temperature against Salinity (Still need to figure out how to increase axis intervals)
+#plt.scatter([Temp],[Sal])  
+#plt.axis((1,25,0,40))
+#plt.xlabel("Temperature")
+#plt.ylabel("Salinity")
+#plt.xscale("linear")
+#plt.show()
+
+#FullMoonTemp = (Temp[iLoop])
+     #FullMoonSal = (Sal[iLoop])
+      #MasterArray = [Temp[iLoop],Sal[iLoop]]
+
+#plt.scatter([FullMoonTemp],[FullMoonSal])  
+#plt.axis((1,25,0,40))
+#plt.xlabel("Temperature")
+#plt.ylabel("Salinity")
+#plt.xscale("linear")
+#plt.show()
