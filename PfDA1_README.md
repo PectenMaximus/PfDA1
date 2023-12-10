@@ -16,4 +16,3 @@
 |6. Use all functions in J notebooks; images, links, code and plots.|
 |7. Use Git Hub issues to outline a project plan - timeline - steps for completion.|
 
-This project contains data from copernicus. 
